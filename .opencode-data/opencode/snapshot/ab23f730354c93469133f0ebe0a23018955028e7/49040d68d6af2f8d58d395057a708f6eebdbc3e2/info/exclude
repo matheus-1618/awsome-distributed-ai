@@ -4,3 +4,5 @@
 # exclude patterns (uncomment them if you want to use them):
 # *.[oa]
 # *~
+/.opencode-data/opencode/opencode.db
+/.opencode-data/opencode/opencode.db-wal

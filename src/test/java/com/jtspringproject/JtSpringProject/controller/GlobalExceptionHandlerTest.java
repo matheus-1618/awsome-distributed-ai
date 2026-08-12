@@ -15,6 +15,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Controller;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.validation.BindException;
@@ -35,19 +36,24 @@ import com.jtspringproject.JtSpringProject.services.userService;
  * <p>Spring Security and Hibernate JPA auto-configurations are excluded so the
  * test runs without a live database or security filter chain, per
  * dec-webmvctest-mock-services.</p>
+ *
+ * <p>The inner @Controller stub classes and the @ControllerAdvice are registered
+ * via @Import — not via the controllers= attribute of @WebMvcTest — because
+ * inner static classes defined inside the test class are not on the normal
+ * component scan path that @WebMvcTest's type filter uses.</p>
  */
 @WebMvcTest(
-    controllers = {
-        GlobalExceptionHandler.class,
-        GlobalExceptionHandlerTest.NotFoundTrigger.class,
-        GlobalExceptionHandlerTest.ServerErrorTrigger.class,
-        GlobalExceptionHandlerTest.ValidationErrorTrigger.class
-    },
     excludeAutoConfiguration = {
         HibernateJpaAutoConfiguration.class,
         SecurityAutoConfiguration.class
     }
 )
+@Import({
+    GlobalExceptionHandler.class,
+    GlobalExceptionHandlerTest.NotFoundTrigger.class,
+    GlobalExceptionHandlerTest.ServerErrorTrigger.class,
+    GlobalExceptionHandlerTest.ValidationErrorTrigger.class
+})
 class GlobalExceptionHandlerTest {
 
     static final String SENTINEL_NOT_FOUND = "SENTINEL_NOT_FOUND_12345";

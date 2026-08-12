@@ -16,6 +16,9 @@
 	<description>Spring project for Java Technology</description>
 	<properties>
 		<java.version>11</java.version>
+		<!-- Override at CI time with -Djacoco.execFile=/tmp/jacoco.exec to avoid NFS lock failures -->
+		<jacoco.execFile>${project.build.directory}/jacoco.exec</jacoco.execFile>
+		<jacoco.reportOutputDir>${project.reporting.outputDirectory}/jacoco</jacoco.reportOutputDir>
 	</properties>
 	<dependencies>
 
@@ -105,6 +108,9 @@
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
+						<configuration>
+							<destFile>${jacoco.execFile}</destFile>
+						</configuration>
 					</execution>
 					<execution>
 						<id>jacoco-check</id>
@@ -113,6 +119,7 @@
 							<goal>check</goal>
 						</goals>
 						<configuration>
+							<dataFile>${jacoco.execFile}</dataFile>
 							<includes>
 								<include>com/jtspringproject/JtSpringProject/controller/GlobalExceptionHandler.class</include>
 							</includes>

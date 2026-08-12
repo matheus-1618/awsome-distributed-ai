@@ -262,40 +262,33 @@ ALWAYS enforce ≥80% JaCoCo line coverage on new or modified @Controller and @S
 
 ---
 
-ALWAYS set spring.jpa.hibernate.ddl-auto=validate in application.properties as the first committed change in any Construction Bolt that introduces or modifies JPA entities in this project. The current live value is 'update', which permits Hibernate to mutate the production schema at startup. This constraint is a hard pre-condition before any other entity, repository, or service code is merged. (Identified feasibility stage, 2026-08-12)
+# Construction Phase Guardrails
 
----
+These rules apply to every stage whose `phase: construction` declaration
+imports them as the matching phase rule.
 
-ALWAYS use GitHub Flow for this project. Feature branches use conventional prefixes (feat/, fix/, refactor/, chore/, style/). All branches merge to main via pull request with squash-merge strategy. At Bolt-merge dispatch: --base main --target main --strategy squash. Affirmed during practices-discovery 2026-08-12.
+## Code Completeness
 
----
+- Generate complete, runnable files — no partial implementations, no placeholder stubs unless explicitly marked TODO with a rationale
+- Every generated module must be independently executable or clearly document its dependencies
+- Do not leave unresolved import errors, missing type definitions, or broken references
 
-ALWAYS use constructor injection for all Spring-managed beans in microservices. NEVER use @Autowired field injection or setter injection. This pattern is demonstrated in CartController and CartService and is a binding convention for all new microservice code. Affirmed during practices-discovery 2026-08-12.
+## Error Handling
 
----
+- Always include error handling at integration boundaries (API calls, database operations, file I/O, external services)
+- Errors must be surfaced to the caller or logged — silent failures are not acceptable
+- Distinguish between recoverable errors (retry/fallback) and fatal errors (fail fast)
 
-ALWAYS add Javadoc to all public methods on @Controller and @Service classes in microservices. This documents the HTTP contract, algorithm, preconditions, and exception semantics for future agents and reviewers. Affirmed during practices-discovery 2026-08-12.
+## Testing Standards
 
----
+- Test files must cover the happy path and at least two error/edge cases
+- Tests must be runnable without manual setup beyond documented prerequisites
+- Do not generate tests that always pass regardless of implementation (e.g., `assert True`)
 
-NEVER configure a CI/CD pipeline, Dockerfile, or production deployment as part of Phase 2.1 or Phase 2.2 cart/checkout service work. Automated CI (GitHub Actions mvn verify + JaCoCo gate), container packaging, and production deployment are all deferred to Phase 2.3. Affirmed during practices-discovery 2026-08-12.
+## Security
 
----
+- Never hardcode credentials, API keys, or secrets — use environment variables or a secrets manager
+- Validate and sanitize all inputs at system boundaries
+- Flag any code that bypasses authentication or authorization checks
 
-ALWAYS use PreparedStatement with bound parameters for every JDBC query in JtProject. NEVER build SQL strings via string concatenation of user-controlled values, instance fields, request parameters, or session attributes. This eliminates the SQL injection vulnerability at AdminController.java:238. Affirmed during practices-discovery 2026-08-12.
-
----
-
-NEVER hardcode database usernames, passwords, or JDBC URLs in Java source files, JSP scriptlets, or SQL schema files. All credentials must be externalised to application.properties properties backed by OS environment variables. Affirmed during practices-discovery 2026-08-12.
-
----
-
-NEVER store authentication state (login check flag, authenticated username) in controller singleton instance fields. ALWAYS use HttpSession attributes for per-request authentication state. This eliminates the thread-unsafe race condition at AdminController.java:38-39 (adminlogcheck, usernameforclass). Affirmed during practices-discovery 2026-08-12.
-
----
-
-ALWAYS hash passwords with BCryptPasswordEncoder (cost ≥ 10 via spring-security-crypto) before persisting. NEVER store or compare plaintext passwords. NEVER log passwords at any log level. This addresses SD-04, SD-05 in the hardening intent. Affirmed during practices-discovery 2026-08-12.
-
----
-
-ALWAYS use try-with-resources for every JDBC Connection, Statement, and ResultSet in JtProject. NEVER rely on finally blocks or leave JDBC resources unclosed. This closes the JDBC connection leak in AdminController.java and cartproduct.jsp. Affirmed during practices-discovery 2026-08-12.
+## Corrections
