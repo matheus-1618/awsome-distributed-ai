@@ -1,0 +1,53 @@
+timestamp=2026-08-12T20:31:12.209Z level=INFO run=12e21eb7 message="creating instance" directory=/mnt/workspace
+timestamp=2026-08-12T20:31:12.218Z level=INFO run=12e21eb7 message=fromDirectory directory=/mnt/workspace
+timestamp=2026-08-12T20:31:12.485Z level=INFO run=12e21eb7 message=bootstrapping directory=/mnt/workspace
+timestamp=2026-08-12T20:31:12.505Z level=INFO run=12e21eb7 message=loading path=/home/node/.config/opencode/config.json
+timestamp=2026-08-12T20:31:12.516Z level=INFO run=12e21eb7 message=loading path=/home/node/.config/opencode/opencode.json
+timestamp=2026-08-12T20:31:12.521Z level=INFO run=12e21eb7 message=loading path=/home/node/.config/opencode/opencode.jsonc
+timestamp=2026-08-12T20:31:12.680Z level=INFO run=12e21eb7 message="all LSPs are disabled"
+timestamp=2026-08-12T20:31:12.682Z level=INFO run=12e21eb7 message="all formatters are disabled"
+timestamp=2026-08-12T20:31:12.682Z level=INFO run=12e21eb7 message=init
+timestamp=2026-08-12T20:31:13.023Z level=INFO run=12e21eb7 message=created id=ses_00853fd80ffeliwWhE7Q2f7QIB slug=misty-planet version=1.17.20 projectID=ab23f730354c93469133f0ebe0a23018955028e7 directory=/mnt/workspace path="" workspaceID=undefined parentID=undefined title="New session - 2026-08-12T20:31:13.023Z" agent=undefined model=undefined metadata=undefined permission="[{\"permission\":\"question\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_enter\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_exit\",\"pattern\":\"*\",\"action\":\"deny\"}]" cost=0 tokens.input=0 tokens.output=0 tokens.reasoning=0 tokens.cache.read=0 tokens.cache.write=0 time.created=1786566673023 time.updated=1786566673023
+timestamp=2026-08-12T20:31:13.052Z level=INFO run=12e21eb7 message="event connected"
+timestamp=2026-08-12T20:31:13.878Z level=INFO run=12e21eb7 message=loop session.id=ses_00853fd80ffeliwWhE7Q2f7QIB step=0
+timestamp=2026-08-12T20:31:13.939Z level=INFO run=12e21eb7 message=stream providerID=amazon-bedrock modelID=global.anthropic.claude-haiku-4-5-20251001-v1:0 session.id=ses_00853fd80ffeliwWhE7Q2f7QIB small=true agent=title mode=primary
+timestamp=2026-08-12T20:31:13.979Z level=INFO run=12e21eb7 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=amazon-bedrock llm.model=global.anthropic.claude-haiku-4-5-20251001-v1:0
+timestamp=2026-08-12T20:31:14.081Z level=INFO run=12e21eb7 message=initialized
+timestamp=2026-08-12T20:31:14.148Z level=INFO run=12e21eb7 message=tracking hash=8f99dafa62047c7f8f746b75d96c1cac4470f471 cwd=/mnt/workspace git=/home/node/.opencode-data/opencode/snapshot/ab23f730354c93469133f0ebe0a23018955028e7/49040d68d6af2f8d58d395057a708f6eebdbc3e2
+timestamp=2026-08-12T20:31:14.165Z level=INFO run=12e21eb7 message="shell tool using shell" shell=/usr/bin/bash
+timestamp=2026-08-12T20:31:14.729Z level=INFO run=12e21eb7 message=init count=1
+timestamp=2026-08-12T20:31:14.876Z level=INFO run=12e21eb7 message="watcher backend" directory=/mnt/workspace platform=linux backend=inotify
+timestamp=2026-08-12T20:31:14.877Z level=INFO run=12e21eb7 message="project copy refresh started" projectID=ab23f730354c93469133f0ebe0a23018955028e7
+timestamp=2026-08-12T20:31:15.537Z level=INFO run=12e21eb7 message="project copy refresh done" projectID=ab23f730354c93469133f0ebe0a23018955028e7 updated=[] removed=[]
+timestamp=2026-08-12T20:31:15.557Z level=INFO run=12e21eb7 message="booting location services" directory=/mnt/workspace workspaceID=undefined
+timestamp=2026-08-12T20:31:15.576Z level=INFO run=12e21eb7 message=process session.id=ses_00853fd80ffeliwWhE7Q2f7QIB messageID=msg_ff7ac05db001OD7RihWw8f1Vkp
+timestamp=2026-08-12T20:31:15.578Z level=INFO run=12e21eb7 message=stream providerID=amazon-bedrock modelID=us.anthropic.claude-sonnet-4-6 session.id=ses_00853fd80ffeliwWhE7Q2f7QIB small=false agent=build mode=primary
+timestamp=2026-08-12T20:31:15.583Z level=INFO run=12e21eb7 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=amazon-bedrock llm.model=us.anthropic.claude-sonnet-4-6
+timestamp=2026-08-12T20:31:19.814Z level=INFO run=12e21eb7 message=evaluated permission=aidlc_emit_stage_note pattern=* action.permission=* action.action=allow action.pattern=*
+timestamp=2026-08-12T20:31:20.043Z level=INFO run=12e21eb7 message=tracking hash=8f99dafa62047c7f8f746b75d96c1cac4470f471 cwd=/mnt/workspace git=/home/node/.opencode-data/opencode/snapshot/ab23f730354c93469133f0ebe0a23018955028e7/49040d68d6af2f8d58d395057a708f6eebdbc3e2
+timestamp=2026-08-12T20:31:20.102Z level=INFO run=12e21eb7 message=loop session.id=ses_00853fd80ffeliwWhE7Q2f7QIB step=1
+timestamp=2026-08-12T20:31:20.158Z level=INFO run=12e21eb7 message=tracking hash=8f99dafa62047c7f8f746b75d96c1cac4470f471 cwd=/mnt/workspace git=/home/node/.opencode-data/opencode/snapshot/ab23f730354c93469133f0ebe0a23018955028e7/49040d68d6af2f8d58d395057a708f6eebdbc3e2
+timestamp=2026-08-12T20:31:20.195Z level=INFO run=12e21eb7 message=process session.id=ses_00853fd80ffeliwWhE7Q2f7QIB messageID=msg_ff7ac1e28001bhTVVhxWNVtu50
+timestamp=2026-08-12T20:31:20.196Z level=INFO run=12e21eb7 message=stream providerID=amazon-bedrock modelID=us.anthropic.claude-sonnet-4-6 session.id=ses_00853fd80ffeliwWhE7Q2f7QIB small=false agent=build mode=primary
+timestamp=2026-08-12T20:31:20.200Z level=INFO run=12e21eb7 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=amazon-bedrock llm.model=us.anthropic.claude-sonnet-4-6
+timestamp=2026-08-12T20:31:24.367Z level=INFO run=12e21eb7 message=evaluated permission=aidlc_emit_stage_note pattern=* action.permission=* action.action=allow action.pattern=*
+timestamp=2026-08-12T20:31:24.499Z level=INFO run=12e21eb7 message=tracking hash=8f99dafa62047c7f8f746b75d96c1cac4470f471 cwd=/mnt/workspace git=/home/node/.opencode-data/opencode/snapshot/ab23f730354c93469133f0ebe0a23018955028e7/49040d68d6af2f8d58d395057a708f6eebdbc3e2
+timestamp=2026-08-12T20:31:24.544Z level=INFO run=12e21eb7 message=loop session.id=ses_00853fd80ffeliwWhE7Q2f7QIB step=2
+timestamp=2026-08-12T20:31:24.603Z level=INFO run=12e21eb7 message=tracking hash=8f99dafa62047c7f8f746b75d96c1cac4470f471 cwd=/mnt/workspace git=/home/node/.opencode-data/opencode/snapshot/ab23f730354c93469133f0ebe0a23018955028e7/49040d68d6af2f8d58d395057a708f6eebdbc3e2
+timestamp=2026-08-12T20:31:24.636Z level=INFO run=12e21eb7 message=process session.id=ses_00853fd80ffeliwWhE7Q2f7QIB messageID=msg_ff7ac2f83001xOKUI5CjfqvSUA
+timestamp=2026-08-12T20:31:24.638Z level=INFO run=12e21eb7 message=stream providerID=amazon-bedrock modelID=us.anthropic.claude-sonnet-4-6 session.id=ses_00853fd80ffeliwWhE7Q2f7QIB small=false agent=build mode=primary
+timestamp=2026-08-12T20:31:24.641Z level=INFO run=12e21eb7 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=amazon-bedrock llm.model=us.anthropic.claude-sonnet-4-6
+timestamp=2026-08-12T20:31:30.024Z level=INFO run=12e21eb7 message=evaluated permission=aidlc_send_output pattern=* action.permission=* action.action=allow action.pattern=*
+timestamp=2026-08-12T20:31:30.096Z level=INFO run=12e21eb7 message=tracking hash=8f99dafa62047c7f8f746b75d96c1cac4470f471 cwd=/mnt/workspace git=/home/node/.opencode-data/opencode/snapshot/ab23f730354c93469133f0ebe0a23018955028e7/49040d68d6af2f8d58d395057a708f6eebdbc3e2
+timestamp=2026-08-12T20:31:30.148Z level=INFO run=12e21eb7 message=loop session.id=ses_00853fd80ffeliwWhE7Q2f7QIB step=3
+timestamp=2026-08-12T20:31:30.201Z level=INFO run=12e21eb7 message=tracking hash=8f99dafa62047c7f8f746b75d96c1cac4470f471 cwd=/mnt/workspace git=/home/node/.opencode-data/opencode/snapshot/ab23f730354c93469133f0ebe0a23018955028e7/49040d68d6af2f8d58d395057a708f6eebdbc3e2
+timestamp=2026-08-12T20:31:30.221Z level=INFO run=12e21eb7 message=process session.id=ses_00853fd80ffeliwWhE7Q2f7QIB messageID=msg_ff7ac4567001OvHxbQiAzSxJky
+timestamp=2026-08-12T20:31:30.222Z level=INFO run=12e21eb7 message=stream providerID=amazon-bedrock modelID=us.anthropic.claude-sonnet-4-6 session.id=ses_00853fd80ffeliwWhE7Q2f7QIB small=false agent=build mode=primary
+timestamp=2026-08-12T20:31:30.225Z level=INFO run=12e21eb7 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=amazon-bedrock llm.model=us.anthropic.claude-sonnet-4-6
+timestamp=2026-08-12T20:31:32.681Z level=INFO run=12e21eb7 message=evaluated permission=aidlc_collect_metric pattern=* action.permission=* action.action=allow action.pattern=*
+timestamp=2026-08-12T20:31:32.796Z level=INFO run=12e21eb7 message=tracking hash=8f99dafa62047c7f8f746b75d96c1cac4470f471 cwd=/mnt/workspace git=/home/node/.opencode-data/opencode/snapshot/ab23f730354c93469133f0ebe0a23018955028e7/49040d68d6af2f8d58d395057a708f6eebdbc3e2
+timestamp=2026-08-12T20:31:32.840Z level=INFO run=12e21eb7 message=loop session.id=ses_00853fd80ffeliwWhE7Q2f7QIB step=4
+timestamp=2026-08-12T20:31:32.902Z level=INFO run=12e21eb7 message=tracking hash=8f99dafa62047c7f8f746b75d96c1cac4470f471 cwd=/mnt/workspace git=/home/node/.opencode-data/opencode/snapshot/ab23f730354c93469133f0ebe0a23018955028e7/49040d68d6af2f8d58d395057a708f6eebdbc3e2
+timestamp=2026-08-12T20:31:32.937Z level=INFO run=12e21eb7 message=process session.id=ses_00853fd80ffeliwWhE7Q2f7QIB messageID=msg_ff7ac4feb0016hj8kCKlQGP1VN
+timestamp=2026-08-12T20:31:32.938Z level=INFO run=12e21eb7 message=stream providerID=amazon-bedrock modelID=us.anthropic.claude-sonnet-4-6 session.id=ses_00853fd80ffeliwWhE7Q2f7QIB small=false agent=build mode=primary
+timestamp=2026-08-12T20:31:32.953Z level=INFO run=12e21eb7 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=amazon-bedrock llm.model=us.anthropic.claude-sonnet-4-6
